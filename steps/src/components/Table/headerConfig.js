@@ -1,3 +1,6 @@
+import  handleEditSvg from '../../assets/icons/handleEdit.svg'
+import handleDelete from '../../assets/icons/handleDelete.svg'
+
 const header =  [
     {
         id: 'time',
@@ -10,13 +13,13 @@ const header =  [
     {
         id: 'action',
         title: 'Действия',
-        template: () => {
+        template: (handleRemove, handleEdit, id) => {
             return <><div className="table__content-cell table__content-cell-icons">
             <div className="table__icon">
-                <img src="./assets/icons/handleEdit.svg" className="table__icon-img" data-element="handleEdit" alt="edit"/>
+                <img src={handleEditSvg} onClick={() => handleEdit(id)} className="table__icon-img" data-element="handleEdit" alt="edit"/>
             </div>
-            <div className="table__icon">
-                <img src="./assets/icons/handleDelete.svg" className="table__icon-img" data-element="handleDelete" alt="delete"/>
+            <div className="table__icon" onClick={() => handleRemove(id)}>
+                <img src={handleDelete} className="table__icon-img" data-element="handleDelete" alt="delete"/>
             </div>
         </div></>
         }

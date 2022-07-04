@@ -2,13 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import TableItem from '../TablelItem/TableItem';
 
-function TableList({items}) {
-    
+function TableList({items, handleRemove, handleEdit}) {
     return (
         <div className="table__content-body" data-element="body">
             {items.map((item) => {
                 return (
-                    <div className="table__content-body-row table__content-row"><TableItem item={item} /></div>
+                    <div className="table__content-body-row table__content-row" ><TableItem item={item} handleEdit={handleEdit} handleRemove={handleRemove} /></div>
                 )
             })}
         </div>
