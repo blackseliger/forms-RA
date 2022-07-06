@@ -5,5 +5,6 @@ export default class TableItemModel {
         this.time = new Date(date);
         this.distance = distance;
         this.id = shortid.generate();
+        console.log(this.id);
     }
 } 

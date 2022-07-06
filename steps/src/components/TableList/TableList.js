@@ -7,7 +7,7 @@ function TableList({items, handleRemove, handleEdit}) {
         <div className="table__content-body" data-element="body">
             {items.map((item) => {
                 return (
-                    <div className="table__content-body-row table__content-row" ><TableItem item={item} handleEdit={handleEdit} handleRemove={handleRemove} /></div>
+                    <div className="table__content-body-row table__content-row" key={item.id} ><TableItem  item={item} handleEdit={handleEdit} handleRemove={handleRemove} /></div>
                 )
             })}
         </div>
